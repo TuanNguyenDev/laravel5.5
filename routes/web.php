@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return response()->json(['name' => 'tuannguyen','age' => '21']);
-});
-Route::get('tuan', function(){
-	return Hash::make('123456');
-});
+Route::get('/', 'HomeController@index');
+
+Route::get('category','HomeController@cate');
